@@ -8,6 +8,11 @@ import { PageBackward, PageForward, PageJump } from './store/annotation/actionCr
 import { i18n } from '@labelbee/lb-utils';
 import { I18nextProvider } from 'react-i18next';
 import AnnotationView from '@/components/AnnotationView';
+import { getWindow } from 'ssr-window';
+
+// @ts-ignore
+// eslint-disable-next-line no-global-assign
+window = getWindow();
 
 export const store = configureStore();
 
